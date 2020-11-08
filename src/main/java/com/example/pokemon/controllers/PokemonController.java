@@ -22,10 +22,10 @@ public class PokemonController {
     @Autowired
     private PokemonConsumerService pokemonConsumerService;
 
-    @GetMapping("/test")
-    public void findAllPokemon(){
-        pokemonConsumerService.getAllPokemonsFromApi();
-    }
+   // @GetMapping("/test")
+  //  public void findAllPokemon(){
+   //     pokemonConsumerService.getAllPokemonsFromApi();
+  //  }
 
     @GetMapping
     public ResponseEntity<List<Pokemon>> findPokemon(@RequestParam String name, @RequestParam(required = false) String type){
