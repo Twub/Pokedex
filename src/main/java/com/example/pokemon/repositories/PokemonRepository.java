@@ -1,13 +1,13 @@
-package com.example.pokedex.repositories;
+package com.example.pokemon.repositories;
 
-import com.example.pokedex.entities.Pokemon;
+import com.example.pokemon.entities.Pokemon;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import java.util.List;
 
 @Repository
 public interface PokemonRepository extends MongoRepository<Pokemon, String> {
 
-    Optional<Pokemon> findByName(String name);
+    List<Pokemon> findByName(String name);
 }

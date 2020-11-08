@@ -1,29 +1,22 @@
-package com.example.pokedex.entities;
+package com.example.pokemon.entities;
 
 import org.springframework.data.annotation.Id;
 
-import javax.validation.constraints.NotNull;
 import java.util.List;
 
-public class Pokemon {
+public class Type {
     @Id
     private String id;
     private String name;
-    private int height;
-    private int weight;
-    private int baseExperience;
-    private String locationEncounter;
-    private List<Object> types;
-    private List<Object> abilities;
-    private List<Object> games;
-    private Object specie;
+    private List<String> otherPokemons;
 
-    public Pokemon(){
+    public Type(){
 
     }
 
-    public Pokemon(String name){
+    public Type(String name, List<String> otherPokemons){
         this.name = name;
+        this.otherPokemons = otherPokemons;
     }
 
     public String getId() {
@@ -40,5 +33,13 @@ public class Pokemon {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<String> getOtherPokemons() {
+        return otherPokemons;
+    }
+
+    public void setOtherPokemons(List<String> otherPokemons) {
+        this.otherPokemons = otherPokemons;
     }
 }
